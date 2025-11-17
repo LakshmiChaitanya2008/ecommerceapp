@@ -19,7 +19,7 @@ export default function AdminPage() {
 
       const getOrders = async function () {
         const data = await axios.get(
-          `http://localhost:5000/admin/orders?page=${currentPage}`,
+          `https://ecommerceapp-bno1.onrender.com/admin/orders?page=${currentPage}`,
           {
             headers: {
               "x-access-token": currentUser.token,
@@ -35,7 +35,7 @@ export default function AdminPage() {
 
   const changeOrderStatus = async function (i, s) {
     const data = await axios.put(
-      `http://localhost:5000/admin/orders/${i}/status`,
+      `https://ecommerceapp-bno1.onrender.com/admin/orders/${i}/status`,
       {
         status: s,
       },

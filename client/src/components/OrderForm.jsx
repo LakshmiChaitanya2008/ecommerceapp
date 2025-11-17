@@ -11,7 +11,7 @@ export default function OrderForm() {
   const navigate = useNavigate("");
   const handleOrder = async function (data) {
     const res = await axios.post(
-      "http://localhost:5000/order",
+      "https://ecommerceapp-bno1.onrender.com/order",
       { ...data },
       {
         headers: {

@@ -12,7 +12,7 @@ export default function CheckoutPage() {
     const getCartProducts = async function () {
       const ids = cart.map((p) => p.product).join(",");
 
-      const data = await axios.get(`http://localhost:5000/products?ids=${ids}`);
+      const data = await axios.get(`https://ecommerceapp-bno1.onrender.com/products?ids=${ids}`);
 
       setProducts(data.data);
     };

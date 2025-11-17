@@ -9,7 +9,7 @@ export const CartContextProvider = function ({ children }) {
 
   const getCart = async function () {
     if (currentUser) {
-      const data = await axios.get("http://localhost:5000/cart/", {
+      const data = await axios.get("https://ecommerceapp-bno1.onrender.com/cart/", {
         headers: {
           "x-access-token": currentUser.token,
         },

@@ -46,7 +46,7 @@ export default function YourOrdersPage() {
   const [cart, setCart] = useContext(CartContext);
   useEffect(() => {
     const getOrders = async function () {
-      const data = await axios.get("http://localhost:5000/order", {
+      const data = await axios.get("https://ecommerceapp-bno1.onrender.com/order", {
         headers: {
           "x-access-token": currentUser.token,
         },
@@ -59,7 +59,7 @@ export default function YourOrdersPage() {
     // const getOrderProducts = async function () {
     //   //   const ids = orders.map((o) => o.).join(",");
 
-    //   const data = await axios.get(`http://localhost:5000/products?ids=${ids}`);
+    //   const data = await axios.get(`https://ecommerceapp-bno1.onrender.com/products?ids=${ids}`);
     //   console.log(data);
     //   setProducts(data.data);
     // };
