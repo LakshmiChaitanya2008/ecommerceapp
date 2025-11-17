@@ -7,9 +7,10 @@ export default function Products() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  const url = "https://ecommerceapp-bno1.onrender.com"
   useEffect(() => {
     const getAllProducts = async function () {
-      const data = await axios.get("http://localhost:5000/products");
+      const data = await axios.get(`${url}/products`);
 
       setProducts(data.data);
       setFilteredProducts(data.data);

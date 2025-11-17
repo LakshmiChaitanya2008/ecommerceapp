@@ -3,12 +3,13 @@ import { UserContext } from "../store/UserContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const url = "https://ecommerceapp-bno1.onrender.com"
 export const useAuth = function () {
   const [currentUser, setCurrentUser] = useContext(UserContext);
   const navigate = useNavigate();
   return {
     login: async function (email, password) {
-      const data = await axios.post("http://localhost:5000/auth/login", {
+      const data = await axios.post(`${url}/auth/login`, {
         email,
         password,
       });
@@ -21,7 +22,7 @@ export const useAuth = function () {
     },
 
     register: async function (name, email, password) {
-      const data = await axios.post("http://localhost:5000/auth/register", {
+      const data = await axios.post(`${url}/auth/register`, {
         name,
         email,
         password,
