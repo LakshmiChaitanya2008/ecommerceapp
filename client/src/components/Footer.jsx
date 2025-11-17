@@ -66,7 +66,7 @@ export default function Footer() {
               </Link>
             </li> : ""}
             <li>
-              <Link to="/orders" className="mr-4 md:mr-6" onClick={logout}>
+              <Link to="/" className="mr-4 md:mr-6" onClick={logout}>
                 Log Out
               </Link>
             </li>
